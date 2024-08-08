@@ -12,7 +12,7 @@ body {
     max-width: 100%;
     margin: 0 auto;
     padding: 10px;
-    background-image: url('ivi.png');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ h1 {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 10px;
     justify-content: center;
     margin-bottom: 20px;

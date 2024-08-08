@@ -3,15 +3,10 @@ const resetButton = document.getElementById('reset-button');
 const message = document.getElementById('message');
 const messages = [
     "Você é uma pessoa incrível!",
-"Voce me faz um bem do krl!",
-"Você tem um ótimo senso de humor!",
-"Os roles sem voce ja nao sao mais os mesmos!",
-"Adoro nossas conversas e risadas!",
-"Você é a melhor coisa que me aconteceu esse ano!",
-"Sempre posso contar com você, e voce comigo!",
-"Você faz qualquer dia parecer melhor!",
-"Espero nunca te perder <3!",
-"Amo nossas fofocas!"   
+    "Sempre me divirto muito com você!",
+    "Você tem um ótimo senso de humor!",
+    "Sua presença sempre alegra o ambiente!",
+    "Adoro nossas conversas e risadas!"
 ];
 let cards = [];
 let flippedCards = [];
@@ -21,7 +16,7 @@ let matchedPairs = 0;
 function createCards() {
     cards = [];
     const cardMessages = [...messages, ...messages];
-    cardMessages.sort(() => 0.5 - Math.random());
+    cardMessages.sort(() => 0.5 - Math.random()).slice(0, 8); // Limitar a 8 cartas
     cardMessages.forEach((msg) => {
         const card = document.createElement('div');
         card.classList.add('card');
