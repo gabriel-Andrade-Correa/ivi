@@ -11,6 +11,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-image: url('ivi.png');
+    background-size: cover; /* Ajusta a imagem para cobrir o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 
 h1 {
