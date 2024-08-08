@@ -34,7 +34,7 @@ h1 {
 
 .card {
     width: 100%;
-    padding-top: 100%; /* Mantém a proporção das cartas */
+    padding-top: 90%; /* Mantém a proporção das cartas */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
