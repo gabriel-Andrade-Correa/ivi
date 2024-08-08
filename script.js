@@ -2,11 +2,11 @@ const board = document.getElementById('game-board');
 const resetButton = document.getElementById('reset-button');
 const message = document.getElementById('message');
 const messages = [
-    "Você é uma pessoa incrível!",
+    "Você é a coisa mais imortante nos ultimos tempo!",
     "Sempre me divirto muito com você!",
-    "Você tem um ótimo senso de humor!",
-    "Sua presença sempre alegra o ambiente!",
-    "Adoro nossas conversas e risadas!"
+    "Nenhum role e o mesmo sem voce!",
+    "A coisa que eu mais gosto sao nossas fofocas!",
+    "Espero nunca te perder!"
 ];
 let cards = [];
 let flippedCards = [];
@@ -47,7 +47,7 @@ function checkMatch() {
         matchedPairs++;
         message.textContent = "Bom trabalho, você encontrou um par!";
         if (matchedPairs === messages.length) {
-            message.textContent = "Você ganhou! 🎉 Espero que tenha se divertido!";
+            message.textContent = "Espero que tenha se divertido, Ganhou um Açai!";
         }
         flippedCards = [];
     } else {
