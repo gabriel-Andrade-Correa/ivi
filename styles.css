@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 70%;
+    max-width: 90%; /* Ajustado para mais flexibilidade */
     margin: 0 auto;
     padding: 10px;
     background-image: url('ivi.png');
@@ -26,7 +26,7 @@ h1 {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajuste para um número flexível de colunas */
     grid-gap: 10px;
     justify-content: center;
     margin-bottom: 20px;
@@ -34,7 +34,7 @@ h1 {
 
 .card {
     width: 100%;
-    padding-top: 30%; 
+    padding-top: 100%; /* Mantém a proporção das cartas */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -48,12 +48,6 @@ h1 {
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s, color 0.3s; /* Transições suaves */
-}
-
-.card:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
 }
 
 .card.flipped {
@@ -77,6 +71,12 @@ button:hover {
 }
 
 /* Media Queries */
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas para telas médias */
+    }
+}
+
 @media (max-width: 480px) {
     h1 {
         font-size: 20px;
@@ -85,6 +85,10 @@ button:hover {
     button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
     }
 
     .card {
