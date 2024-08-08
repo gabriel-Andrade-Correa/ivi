@@ -3,15 +3,15 @@ const resetButton = document.getElementById('reset-button');
 const message = document.getElementById('message');
 const messages = [
     "Você é uma pessoa incrível!",
-    "Voce me faz um bem do krl!",
-    "Você tem um ótimo senso de humor!",
-    "Os roles sem voce ja nao sao mais os mesmos!",
-    "Adoro nossas conversas e risadas!",
-    "Você é a melhor coisa que me aconteceu esse ano!",
-    "Sempre posso contar com você, e voce comigo!",
-    "Você faz qualquer dia parecer melhor!",
-    "Espero nunca te perder <3!",
-    "Amo nossas fofocas!"
+"Voce me faz um bem do krl!",
+"Você tem um ótimo senso de humor!",
+"Os roles sem voce ja nao sao mais os mesmos!",
+"Adoro nossas conversas e risadas!",
+"Você é a melhor coisa que me aconteceu esse ano!",
+"Sempre posso contar com você, e voce comigo!",
+"Você faz qualquer dia parecer melhor!",
+"Espero nunca te perder <3!",
+"Amo nossas fofocas!"   
 ];
 let cards = [];
 let flippedCards = [];
@@ -22,7 +22,7 @@ function createCards() {
     cards = [];
     const cardMessages = [...messages, ...messages];
     cardMessages.sort(() => 0.5 - Math.random());
-    cardMessages.forEach((msg, index) => {
+    cardMessages.forEach((msg) => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.message = msg;
@@ -52,7 +52,7 @@ function checkMatch() {
         matchedPairs++;
         message.textContent = "Bom trabalho, você encontrou um par!";
         if (matchedPairs === messages.length) {
-            message.textContent = "Parabens, Ganhou um açai <3";
+            message.textContent = "Você ganhou! 🎉 Espero que tenha se divertido!";
         }
         flippedCards = [];
     } else {
